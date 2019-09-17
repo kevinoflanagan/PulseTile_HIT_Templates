@@ -1,0 +1,6 @@
+{
+  "sourceId": "{{sourceId}}",
+  "source": "ethercis",
+  "dateCreated": "=> getTime(medication_statement_list.context.start_time)",
+  "name": "=> either(medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item|value'],medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item'])"
+}

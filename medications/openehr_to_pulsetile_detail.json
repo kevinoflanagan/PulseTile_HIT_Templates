@@ -1,0 +1,16 @@
+{
+  "sourceId": "{{sourceId}}",
+  "source": "ethercis",
+  "author": "{{medication_statement_list['composer|name']}}",
+  "name": "=> either(medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item|value'], medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item|value'])",
+  "medicationCode": "{{medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item|code']}}",
+  "medicationTerminology": "{{medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['medication_item|terminology']}}",
+  "doseAmount": "=> fromNarrative(medication_statement_list.medication_and_medical_devices.medication_order[0]['narrative'])",
+  "doseDirections": "{{medication_statement_list.medication_and_medical_devices.medication_order[0].order[0].additional_instruction[0]}}",
+  "doseTiming": "{{medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['dose_timing_description']}}",
+  "route": "{{medication_statement_list.medication_and_medical_devices.medication_order[0].order[0]['route']}}",
+  "dateCreated": "=> getTime(medication_statement_list.context.start_time)",  
+  "startDate": "=> getTime(medication_statement_list.medication_and_medical_devices.medication_order[0].order[0].order_details['order_start_date_time'])",
+  "originalComposition": "",
+  "originalSource": ""
+}

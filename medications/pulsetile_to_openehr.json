@@ -1,0 +1,39 @@
+{
+  "ctx": {
+    "composer_name": "{{author}}",
+    "health_care_facility|id": "999999-345",
+    "health_care_facility|name": "Home",
+    "id_namespace": "NHS-UK",
+    "id_scheme": "2.16.840.1.113883.2.1.4.3",
+    "language": "en",
+    "territory": "GB",
+    "time": "{{now}}"
+  },
+  "medication_statement_list": {
+    "medication_and_medical_devices": {
+      "medication_order": [
+        {
+          "order": [
+            {
+              "medication_item|value": "{{name}}",
+              "medication_item|code": "{{medicationCode}}",
+              "medication_item|terminology": "SNOMED-CT",
+              "additional_instruction": "{{doseDirections}}",
+              "route": "{{route}}",
+              "dose_amount_description": "{{doseAmount}}",
+              "dose_timing_description": "{{doseTiming}}",
+              "order_details": {
+                "order_start_date_time": "{{startDate}}",
+                "order_summary": {
+                  "course_status|code": "at0021"
+                }
+              },
+              "timing": "R5/2017-06-26T10:00:00Z/P1M"
+            }
+          ],
+          "narrative": "=> getNarrative(name, route, doseAmount, doseTiming)"
+        }
+      ]
+    }
+  }
+}

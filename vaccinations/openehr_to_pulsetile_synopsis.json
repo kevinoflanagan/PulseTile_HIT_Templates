@@ -1,0 +1,7 @@
+{
+  "text": "{{immunisation_summary.immunisation_procedure[0]['immunisation_name']}}",
+  "dateCreated": "=> getTime(immunisation_summary.context['start_time'])",
+  "source": "ethercis",
+  "sourceId": "{{sourceId}}"
+}
+
