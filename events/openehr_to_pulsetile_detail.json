@@ -1,0 +1,10 @@
+{
+  "name": "{{service_tracker.service[0]['service_name']}}",
+  "type": "{{service_tracker.service[0]['service_type']}}",
+  "description": "{{service_tracker.service[0]['description']}}",
+  "dateTime": "=> getTime(service_tracker.service[0]['time'])",
+  "author": "{{service_tracker['composer|name']}}",
+  "dateCreated": "=> getTime(service_tracker.context['start_time'])",
+  "source": "ethercis",
+  "sourceId": "{{sourceId}}"
+}

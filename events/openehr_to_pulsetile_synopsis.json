@@ -1,0 +1,6 @@
+{
+  "text": "{{service_tracker.service[0]['service_name']}}",
+  "dateCreated": "=> getTime(service_tracker.context['start_time'])",
+  "source": "ethercis",
+  "sourceId": "{{sourceId}}"
+}
